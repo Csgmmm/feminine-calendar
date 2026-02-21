@@ -1,3 +1,4 @@
+//Logs
 export interface ILogs {
     id: string;
     date: string;
@@ -33,3 +34,14 @@ type Cravings = "chocolate" | "sugar" | "carbs" | "salt" | "none";
 type Energy = "low" | "medium" | "high";
 type Skin = "oily" | "acne" | "sensitive" | "dry" | "clear";
 type Hair = "oily" | "dry" | "normal";
+
+
+//Cycles
+
+export interface ICycles {
+   id: string;
+   startDate: string;
+   endDate: string;
+   length: number;
+   is_unusual: boolean; 
+}

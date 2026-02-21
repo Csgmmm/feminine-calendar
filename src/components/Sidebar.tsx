@@ -1,8 +1,8 @@
-function Log() {
+function Navbar() {
     return (
         <>
         </>
     )
 }
 
-export default Log
+export default Navbar

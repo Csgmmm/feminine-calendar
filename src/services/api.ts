@@ -1,4 +1,4 @@
-import type { ILogs } from "../types/types";
+import type { ICycles, ILogs } from "../types/types";
 
 //Adiciono a API aqui:
 const apiURLogs = "https://6999c6659a9ce1d259f2acf2.mockapi.io/api/v1/logs";
@@ -6,14 +6,14 @@ const apiURLCycles =
   "https://6999c6659a9ce1d259f2acf2.mockapi.io/api/v1/cycles";
 
 //Como há 2 API, Fazer fetch do Logs:
-export const getLogs = async (): Promise<[]> => {
+export const getLogs = async (): Promise<ILogs[]> => {
   //o Logs vai ser um array de objects
   const response = await fetch(`${apiURLogs}`);
   const data = await response.json();
   return data;
 };
 
-export const getCycles = async (): Promise<[]> => {
+export const getCycles = async (): Promise<ICycles[]> => {
   const response = await fetch(`${apiURLCycles}`);
   const data = await response.json();
   return data;
@@ -86,63 +86,64 @@ const getLogsAPI: ILogs[]  = [
 
 console.log(getLogsAPI);
 
-const getCyclesAPI = [
+const getCyclesAPI: ICycles[] = [
   {
     id: "1",
     startDate: "2026-01-20",
     endDate: "2026-01-25",
     length: 28,
-    is_unusual: false,
+    is_unusual: false
   },
   {
     id: "2",
     startDate: "2025-12-23",
     endDate: "2025-12-28",
     length: 29,
-    is_unusual: false,
+    is_unusual: false
   },
   {
     id: "3",
-    startDate: "2026-02-20T22:33:26.391Z",
-    endDate: "Daisy Bergstrom",
-    length: 43,
-    is_unusual: false,
+    startDate: "2026-02-20",
+    endDate: "2026-02-25",
+    length: 30,
+    is_unusual: true
   },
   {
     id: "4",
-    startDate: "2026-02-20T19:13:16.198Z",
-    endDate: "Alicia O'Keefe",
-    length: 10,
-    is_unusual: false,
+    startDate: "2026-03-18",
+    endDate: "2026-03-23",
+    length: 27,
+    is_unusual: false
   },
   {
     id: "5",
-    startDate: "2026-02-20T15:34:20.022Z",
-    endDate: "Roderick D'Amore",
-    length: 40,
-    is_unusual: false,
+    startDate: "2026-04-15",
+    endDate: "2026-04-20",
+    length: 33,
+    is_unusual: false
   },
   {
     id: "6",
-    startDate: "2026-02-21T04:20:52.879Z",
-    endDate: "Carroll Lynch",
-    length: 38,
-    is_unusual: false,
+    startDate: "2026-05-12",
+    endDate: "2026-05-17",
+    length: 31,
+    is_unusual: true
   },
   {
     id: "7",
-    startDate: "2026-02-21T11:52:09.600Z",
-    endDate: "Dean O'Kon V",
-    length: 13,
-    is_unusual: false,
+    startDate: "2026-06-08",
+    endDate: "2026-06-13",
+    length: 26,
+    is_unusual: false
   },
   {
     id: "8",
-    startDate: "2026-02-21T13:16:11.241Z",
-    endDate: "Jeanne Harber",
-    length: 83,
-    is_unusual: false,
-  },
+    startDate: "2026-07-05",
+    endDate: "2026-07-10",
+    length: 29,
+    is_unusual: false
+  }
+
 ];
 
 console.log(getCyclesAPI);
