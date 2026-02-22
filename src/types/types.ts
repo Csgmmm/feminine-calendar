@@ -45,3 +45,12 @@ export interface ICycles {
    length: number;
    is_unusual: boolean; 
 }
+
+//users
+
+export interface IUsers {
+   name: string;
+   email: string;
+   avatar: string;
+   id: string;
+}

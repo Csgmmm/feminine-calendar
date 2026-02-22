@@ -1,11 +1,14 @@
 .wrapper {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   background-color: #f7f3f8;
+  overflow: hidden;
+  padding: 1rem;        /* padding à volta de tudo, se fosse no app.css faria scroll */
+  gap: 1rem;            /* espaço entre sidebar e main */
 }
 
 .main {
   flex: 1;
   padding: 2rem;
-  overflow-y: auto; 
+  overflow-y: auto;     /* só o main faz scroll, não a página toda */
 }

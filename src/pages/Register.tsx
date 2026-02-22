@@ -1,8 +1,8 @@
-function Day() {
+function Register() {
     return (
         <>
         </>
     )
 }
 
-export default Day
+export default Register

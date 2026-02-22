@@ -1,5 +1,6 @@
 import Sidebar from "./Sidebar";
 import "./styles/Layout.css"
+// Se tens um ficheiro _document.tsx ou layout.tsx (Next.js)
 
 interface LayoutProps {
   //Esta interface tem um nome de LayoutProps,

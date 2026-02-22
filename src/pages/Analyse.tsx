@@ -1,8 +1,8 @@
-function Log() {
+function Analyse() {
     return (
         <>
         </>
     )
 }
 
-export default Log
+export default Analyse
