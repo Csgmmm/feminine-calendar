@@ -3,7 +3,6 @@ import "./styles/Sidebar.css"; //Importar o css do sidebar.tsx
 import logo from "../assets/logo.svg"
 import avatar from "../assets/avatar.svg"
 
-
 const links = [
   //como quero ter links no meu menu, eu preciso de ir declarar o path de cada um. No caso, é um array de objects, sendo que cada um tem key e value
   { path: "/", label: "Home", icon: "fa-solid fa-house" },
@@ -14,6 +13,8 @@ const links = [
 ];
 
 function Sidebar() {
+
+
   return (
     <>
       <aside className="sidebar">{/* Tenho de criar um aside que é onde estará o meu menu */}
@@ -29,7 +30,7 @@ function Sidebar() {
           <NavLink
             key={link.path} //Key: ID único para o React identificar cada link. Cada link tem o path dado
             to={link.path} //To: Rota para onde o link navega, ou seja, navegam todos entre si
-            end={link.path === "/"} //Com end, o link "/" só fica ativo se a rota for exatamente "/", ou seja, se nao usar, e se estiver em "/about" → Home fica laranja e a bold 
+            end={link.path === "/"} //Com end, o link "/" só fica ativo se a rota for exatamente "/", ou seja, se nao usar, e se estiver em "/calendar" → Home fica a rosa e a bold 
             className={({ isActive }) => isActive ? "link active" : "link"} //Aqui, usei uma class boolean em que retorna: "A página está ativa?" então ativar o css .link.active senão, ativa o css .link 
           >
             <i className={link.icon} /> {/* Aqui dou a cada link o seu icon respetivo*/} 
