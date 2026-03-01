@@ -1,24 +1,25 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Layout from "./components/Layout";
+import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
 import Calendar from "./pages/Calendar";
-import LogPeriod from "./pages/Register";
-import PeriodDetails from "./pages/PeriodDetails";
 import Profile from "./pages/Profile";
+import Analyse from "./pages/Analyse";
+import Register from "./pages/Register";
 
 function App() {
   return (
     <Layout>
       <Routes>
         <Route>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/calendar" element={<Calendar />} />
-          <Route path="/log" element={<LogPeriod />} />
-          <Route path="/period/:id" element={<PeriodDetails />} />
+          <Route path="/analyse" element={<Analyse />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/register" element={<Register />} />
         </Route>
       </Routes>
+      <footer>Footer!</footer>
     </Layout>
   );
 }
